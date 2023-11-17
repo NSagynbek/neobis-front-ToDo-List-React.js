@@ -1,11 +1,10 @@
 
-Certainly! Here's a suggested README description for your project:
-
 Todo List App
 This project is a simple Todo List application built using React and Material-UI components. It allows users to add, delete, and mark tasks as completed.
 
 Demo
-Check out the live demo of the application here.
+[Live Demo](https://neobis-front-to-do-list-react-67a75qo3v-nursultan.vercel.app)
+
 
 Features
 Add new tasks to the list.
