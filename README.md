@@ -1,5 +1,5 @@
 
-Todo List App
+Todo List App.
 This project is a simple Todo List application built using React and Material-UI components. It allows users to add, delete, and mark tasks as completed.
 
 Demo
