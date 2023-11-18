@@ -1,11 +1,10 @@
-import * as React from 'react';
 import List from '@mui/material/List';
-import { useState,useEffect } from 'react';
 import TodoItem from './TodoItem';
 import TodoForm from './TodoForm';
 import { v4 as uuid } from 'uuid';
 import { Box,Typography } from '@mui/material';
-import { ClassNames } from '@emotion/react';
+
+import { useState,useEffect } from 'react';
 
 const getInitialData = ()=>{
     const data = JSON.parse(localStorage.getItem("todos"));
@@ -15,15 +14,16 @@ const getInitialData = ()=>{
 
 export default function TodoList() {
     const [todos, setTodos] = useState(getInitialData);
+
     useEffect(()=>{
         localStorage.setItem("todos",JSON.stringify(todos));
 
-    },[todos])
+    },[todos]);
 
     function addTodo(text){
         setTodos((todos)=>{
-            return [...todos,{text:text,id:uuid(), completed:false}]
-        })
+            return [...todos,{text:text,id:uuid(), completed:false}];
+        });
 
     }
   
@@ -36,12 +36,12 @@ export default function TodoList() {
         m:3,
       }}
       >
-        <Typography variant='h5' component="h1" sx={{flexGrow:1}}>
-           Todos
-        </Typography>
+          <Typography variant='h5' component="h1" sx={{flexGrow:1}}>
+            Todos
+          </Typography>
         <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
           {todos.map((item) => (
-            <TodoItem key={item.id} item={item} setTodos={setTodos} todos={todos} />
+            <TodoItem key={item.id} item={item} setTodos={setTodos} />
           ))}
           <TodoForm addTodo={addTodo}/>
         </List>
