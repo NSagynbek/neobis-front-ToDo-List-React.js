@@ -3,7 +3,7 @@ Todo List App.
 This project is a simple Todo List application built using React and Material-UI components. It allows users to add, delete, and mark tasks as completed.
 
 Demo
-[Live Demo](https://neobis-front-to-do-list-react-67a75qo3v-nursultan.vercel.app)
+[Live Demo](https://neobis-front-to-do-list-react-2t4mbrbko-nursultan.vercel.app)
 
 
 Features
